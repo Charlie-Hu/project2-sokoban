@@ -1,32 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
         {% if title %}
-        <title>{{ title }} - microblog</title>
+            <title>{{ title }}</title>
         {% else %}
-        <title>microblog</title>
+            <title>Sokoban</title>
         {% endif %}
+
+        <!--Outer chain style in main.css file-->
+        <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     </head>
-    <body>
-        <div>
-            Microblog:
-            <a href="{{ url_for('index') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-            <a href="{{ url_for('logout') }}">Logout</a>
-            {% endif %}
-          </div>
+
+    <body class='main'>
+        <div class="div_right">
+            <ul class="ul_one_line">
+                <li class="li_pad">
+                    <a class="nav-link wh_col badge text-bg-primary" style="font-size: 18px;" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="li_pad">
+                    <a class="nav-link wh_col" style="color: white;" href="{{ url_for('game_desc') }}">Introduction</a>
+                </li>
+                {% if current_user.is_anonymous %}
+                <li class="li_pad">
+                    <a class="nav-link wh_col" href="{{ url_for('login') }}">Login</a>
+                </li>
+                {% else %}
+                <li class="li_pad">
+                    <a class="nav-link wh_col" href="{{ url_for('rank_list', username=current_user.username) }}">Ranking List</a>
+                </li>
+                <li class="li_pad">
+                    <a class="nav-link wh_col" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
         <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
+
+        <div style="height: 20px auto;">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li style="color: rgb(46, 27, 156)">{{ message }}</li>
+                {% endfor %}
+            </ul> 
+            {% endif %}
+            {% endwith %}
+        </div>
         {% block content %}{% endblock %}
     </body>
 </html>

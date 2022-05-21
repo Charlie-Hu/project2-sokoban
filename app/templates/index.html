@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+    <h1>Welcome, <span id="user_name">{{ current_user.username }}</span></h1>
+    <br>
+        <div style="text-align:center;">
+            <button style="font-size: 30px;" onclick='game_start()' type="button" class="btn btn-primary">Click! Start game!</button>
+            <p class="next_message"></p>
+        </div>
+
+    <script src="{{url_for('static', filename='index.js')}}"></script>
 {% endblock %}

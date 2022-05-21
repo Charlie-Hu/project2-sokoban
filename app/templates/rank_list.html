@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="{{url_for('static', filename='rank_list.js')}}"></script>
+    <button type="button" onclick="show_toast()" class="btn btn-primary" id="liveToastBtn">Didn't you find yourself? Click to view personal record</button>
+    <br>
+    <p id="ps_if" hidden="hidden" style="color: white;">Your score is <strong style="color: red;">{{ person_info.score_val }}</strong>, the maximum number of levels that have been passed is <strong style="color: red;">{{ person_info.cur_level }}</strong>.</p>
+    <br>
+    <hr>
+    <div class="rank_left">
+        <h1 class="table-light">Score ranking</h1>
+        <table class="table table-striped table-hover">
+            <tr><th scope="col">Ranking</th><th>UserName</th><th>score</th></tr>
+        
+        {% for i in score_val_rank %}
+            <tr><td scope="row"><script>document.write(j);j++</script></td><td>{{ i.username }}</td><td>{{ i.score_val }}</td></tr>
+        {% endfor %}
+
+        </table>
+    </div>
+    <div class="rank_right ">
+        <h1>Customs clearance ranking</h1>
+        <table class="table table-striped table-hover">
+            <tr><th scope="col">Ranking</th><th scope="col">UserName</th><th scope="col">Game Level</th></tr>
+        
+        {% for i in cur_level_rank %}
+            <tr><td scope="row"><script>document.write(jj);jj++</script></td><td>{{ i.username }}</td><td>{{ i.cur_level }}</td></tr>
+        {% endfor %}
+
+        </table>
+    </div>
+{% endblock %}

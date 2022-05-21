@@ -1,25 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
-        <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
-    </form>
+    <h1>Welcome to Sokoban</h1>
+
+    <div class="center_set">
+        <br>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}</span>
+                <span class="input_cl">{{ form.username(size=32) }}</span><br>
+                {% for error in form.username.errors %}
+                <span class="red_col">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                <span>{{ form.password.label }}</span>
+                <span class="input_cl">{{ form.password(size=32) }}</span><br>
+                {% for error in form.password.errors %}
+                <span class="red_col">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <span class="login_bt">{{ form.submit() }}</span>
+            <br>
+            <a href="{{ url_for('edit_pwd') }}">Forgot password?</a>
+            <a href="{{ url_for('register') }}">Need an account?</a>
+            <br>
+        </form>
+    </div>
 {% endblock %}

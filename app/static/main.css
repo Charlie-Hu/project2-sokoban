@@ -1,0 +1,118 @@
+.main {
+    background:rgb(90, 87, 87);
+    font-size: 20px;
+
+}
+
+h1 {
+    color:rgb(43, 192, 226);
+    margin-top: 10%;
+    text-align: center;
+  }
+
+.center_set {
+    position: fixed;
+    text-align: center;
+    margin-top: 5%;
+    left: 25%;
+    right: 25%;
+    height: 300px auto;
+    background-color: rgba(0, 0, 0, 0.395);
+    color:rgba(240, 248, 255, 0.751);
+}
+
+.left_set {
+    position: fixed;
+    text-align: left;
+    margin-top: 5%;
+    left: 25%;
+    right: 25%;
+    height: 300px auto;
+    background-color: rgb(90, 87, 87);
+    color:rgba(240, 248, 255, 0.751);
+}
+
+.login_bt {
+    margin: 20px;
+    width:30%;
+    background: rgb(79, 153, 93);
+    color: rgb(9, 9, 9);
+}
+
+.wh_col {
+    color:rgb(246, 233, 233);
+}
+
+.red_col {
+    color:red;
+}
+
+
+.div_right {
+    text-align:right;
+    font-size: 20px;
+}
+
+.ul_one_line{
+    list-style: none;
+}
+
+.li_pad {
+    margin-right:20px;
+    display: inline-block;
+}
+
+.input_cl {
+    color: black;
+}
+
+.span_class {
+    width:300px; 
+    background-color:red; 
+    display: -moz-inline-box; 
+}
+
+.un_message {
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.em_message {
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.next_message {
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.wrong {
+    color:red;
+}
+
+.right {
+    color:green;
+}
+
+.unclick_bt {
+    margin: 20px;
+    width:30%;
+    background: rgb(201, 58, 58);
+    color: rgb(47, 49, 49);
+}
+
+.game_pos {
+    margin:auto;
+    text-align:center
+}
+
+.rank_left {
+    width: 45%;
+    float: left;
+}
+
+.rank_right {
+    width: 45%;
+    float: right;
+}

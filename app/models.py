@@ -17,6 +17,8 @@ class User(UserMixin, db.Model):
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    score_val = db.Column(db.Integer)
+    cur_level = db.Column(db.Integer)
     
     def avatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
