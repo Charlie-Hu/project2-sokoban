@@ -1,3 +1,22 @@
+commit 8d18b70fda1d10f36820d0b3491ce74148f9951e
+Merge: f831d21 7371da6
+Author: Charlie-Hu <git config --global user.email you@example.com>
+Date:   Sat May 21 22:34:21 2022 +0800
+
+    Merge branch 'main' of https://github.com/Charlie-Hu/project2 into main
+
+commit f831d21f8604fada00431c18f821d68eaf929488
+Author: Charlie-Hu <git config --global user.email you@example.com>
+Date:   Sat May 21 22:34:16 2022 +0800
+
+    commit
+
+commit 7371da680064da5187a1a88d9ca7d89e13219999
+Author: XiaokaiQu <18738128755@163.com>
+Date:   Sat May 21 22:21:02 2022 +0800
+
+    improve function
+
 commit 7a7f88cdc898a4c6108e282e072a4e76016d32a8
 Author: Charlie-Hu <git config --global user.email you@example.com>
 Date:   Sat May 21 20:57:35 2022 +0800
