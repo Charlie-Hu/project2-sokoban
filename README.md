@@ -35,4 +35,4 @@ Requires python3, flask, venv, and sqlite
 
 # Contribute and comment
 ## Authors 
-* Zheng Hu& Xiaokai Qu-*[git commit](https://github.com/Charlie-Hu/project/blob/main/commit.txt)*.
+* Zheng Hu& Xiaokai Qu-*[git commit](https://github.com/Charlie-Hu/project2/blob/main/commit.txt)*.
