@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Authentication</h1>
+    <div class="center_set" style="left: 30%;right: 30%;">
+        <br>
+        <br>
+        <input type="text" onblur='un_check()' style="color: black;"  placeholder="Please input username" id = "username">
+        <p class="un_message"></p>
+        <br>
+        <input type="email" onblur='pwd_check()' style="color: black;" placeholder="Please input email" id = "email">
+        <p class="em_message"></p>
+        <br>
+        <button id='next_but' onclick='check_info()' class="unclick_bt" disabled="true" >Next</button>
+        <p class="next_message"></p>
+        <br>
+        <br>
+    </div>
+
+    <script src="{{url_for('static', filename='edit_pwd.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a id="id_val" hidden="hidden">{{ id }}</a>
+    <a id="cur_level" hidden="hidden">{{ cur_level }}</a>
+
+    <div id="games_dd" class="game_pos" onkeydown="doKeyDown(event)" contenteditable="true">
+        <div class="game">
+            <canvas id="canvas" width="560" height="560"></canvas>
+            <div id="msg"></div>
+            <input type="button" value="Simpler" onclick="NextLevel(-1)">
+            <input type="button" value="Difficult" onclick="NextLevel(1)">
+            <input type="button" value="Reset" onclick="NextLevel(0)">
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='game.js')}}"></script>
+    <script src="{{url_for('static', filename='game_map.js')}}"></script>
+{% endblock %}
