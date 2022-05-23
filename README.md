@@ -32,8 +32,8 @@ Requires python3, flask, venv, and sqlite
 
 
 # Running the tests
-how to run:python/pyhton3 unittest.py
-The test includes the hash value of the password and the verification of the login registration
+* how to run:python/pyhton3 unittest.py
+* The test includes the hash value of the password and the verification of the login registration
 
 
 ## Authors 
