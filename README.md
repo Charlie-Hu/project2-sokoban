@@ -32,7 +32,9 @@ Requires python3, flask, venv, and sqlite
 
 
 # Running the tests
+how to run:python/pyhton3 unittest.py
+The test includes the hash value of the password and the verification of the login registration
 
-# Contribute and comment
+
 ## Authors 
 * Zheng Hu& Xiaokai Qu-*[git commit](https://github.com/Charlie-Hu/project2/blob/main/commit.txt)*.
